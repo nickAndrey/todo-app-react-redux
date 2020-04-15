@@ -1,0 +1,43 @@
+.todo-inp {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 4px 0;
+}
+
+.pane {
+  padding: 10px 12px;
+  box-shadow: 3px 10px 10px 3px rgba(204, 204, 204, 1);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 5px;
+  border-radius: 4px;
+  background: var(--paper);
+}
+
+.pane__textarea {
+  align-self: stretch;
+  background: inherit;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  border-color: transparent;
+  resize: vertical;
+  height: 17px;
+}
+
+.ui-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.ui-button:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+}

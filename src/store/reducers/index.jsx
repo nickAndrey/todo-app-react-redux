@@ -1,7 +1,8 @@
-export const ADD_USERS = 'ADD_USERS';
+import { combineReducers } from "redux";
+import { todoAppReducer } from "./todo-app.reducer";
 
-export function addUsers() {
-  return {
-    type: ADD_USERS
-  }
-}
+const rootReducer = combineReducers({
+  todoList: todoAppReducer,
+});
+
+export default rootReducer;

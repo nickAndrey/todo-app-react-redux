@@ -1,0 +1,30 @@
+.editable-box {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 5px;
+  align-items: flex-start;
+  background: var(--paper);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid var(--gray);
+  margin-top: -3px;
+}
+
+.editable-box__label {
+  align-self: flex-start;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.editable-box__input {
+  align-self: stretch;
+  background: inherit;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  border-color: transparent;
+  resize: vertical;
+  height: 17px;
+}

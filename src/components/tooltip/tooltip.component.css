@@ -1,0 +1,36 @@
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tooltip-container__label {
+  position: absolute;
+  z-index: 100;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 2px 12px;
+  background: #fff;
+}
+
+.tooltip-container__label.top {
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right,
+.left {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-container__label.right {
+  left: calc(100% + 5px);
+}
+
+.tooltip-container__label.left {
+  right: calc(100% + 5px);
+}

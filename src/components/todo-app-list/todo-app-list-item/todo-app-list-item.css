@@ -1,0 +1,10 @@
+.todo-list__item {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed var(--gray);
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 20px 1fr auto auto;
+  grid-column-gap: 5px;
+  font-weight: 300;
+}
