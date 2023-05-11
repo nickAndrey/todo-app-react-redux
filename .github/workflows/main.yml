@@ -1,0 +1,13 @@
+name: chatgpt-reviewer-github-action
+run-name: chatgpt-reviewer-github-action
+on: [pull_request]
+jobs:
+ chatgpt-reviewer-github-action:
+   runs-on: ubuntu-latest
+   steps:
+     - name: ChatGPT Review
+       uses: magnificode-ltd/chatgpt-reviewer-github-action@v0.0.8-prerelease
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+         
