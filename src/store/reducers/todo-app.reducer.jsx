@@ -4,14 +4,12 @@ import {
   EDIT_TODO,
   COMPLETE_TODO,
   IS_EDIT_TODO,
-} from "../actions/todo-app.actions";
+} from '../actions/todo-app.actions';
 
 export function todoAppReducer(state = [], action) {
   switch (action.type) {
     case ADD_TODO:
-      const equals = state.filter(
-        (item) => item.content === action.payload.content
-      );
+      const equals = state.filter((item) => item.content === action.payload.content);
       if (!equals.length && action.payload.content) {
         return [
           ...state,
@@ -28,21 +26,15 @@ export function todoAppReducer(state = [], action) {
       return state.filter((item) => item.id !== action.payload.id);
     case IS_EDIT_TODO:
       return state.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, editable: !item.editable }
-          : item
+        item.id === action.payload.id ? { ...item, editable: !item.editable } : item,
       );
     case EDIT_TODO:
       return state.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, content: action.payload.content }
-          : item
+        item.id === action.payload.id ? { ...item, content: action.payload.content } : item,
       );
     case COMPLETE_TODO:
       return state.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, completed: !item.completed }
-          : item
+        item.id === action.payload.id ? { ...item, completed: !item.completed } : item,
       );
     default:
       return state;
