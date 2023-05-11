@@ -1,6 +1,6 @@
 name: chatgpt-reviewer-github-action
 run-name: chatgpt-reviewer-github-action
-on: [pull_request]
+on: [pull_request, push]
 jobs:
  chatgpt-reviewer-github-action:
    runs-on: ubuntu-latest
