@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './tooltip.component.css';
 
+// Todo rename the component
 function TooltipComponent({ title, position, children }) {
   const node = useRef();
   const [isVisible, setState] = useState(false);
