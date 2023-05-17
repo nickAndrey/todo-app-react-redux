@@ -12,7 +12,7 @@ jobs:
         ref: feature/rate-limit-fixes
     - name: start action
       run: node ./dist/index.js
-   env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
          
