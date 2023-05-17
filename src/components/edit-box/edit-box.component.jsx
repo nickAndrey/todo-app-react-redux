@@ -11,12 +11,10 @@ function EditBoxComponent(props) {
   const dispatch = useDispatch();
 
   return (
-    <div className="editable-box">
-      <span className="editable-box__label">Edit:</span>
-      <textarea
-        rows={1}
-        cols={1}
+    <div className="editable-box" onClick={(e) => e.stopPropagation()}>
+      <input
         className="editable-box__input"
+        type="text"
         defaultValue={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyUp={(e) =>
@@ -24,12 +22,7 @@ function EditBoxComponent(props) {
         }
       />
       <TooltipComponent title={'save'} position={'top'}>
-        <button
-          className="ui-button"
-          onClick={() => {
-            dispatch(editTodo(id, value)) && dispatch(setTodoEditable(id));
-          }}
-        >
+        <button className="ui-button" onClick={() => dispatch(editTodo(id, value)) && dispatch(setTodoEditable(id))}>
           <FiSave />
         </button>
       </TooltipComponent>
