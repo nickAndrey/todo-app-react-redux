@@ -23,5 +23,4 @@ function TodoAppList() {
     </>
   );
 }
-
 export default TodoAppList;
