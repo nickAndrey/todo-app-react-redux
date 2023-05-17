@@ -5,9 +5,14 @@ jobs:
  chatgpt-reviewer-github-action:
    runs-on: ubuntu-latest
    steps:
-     - name: ChatGPT Review
-       uses: magnificode-ltd/chatgpt-reviewer-github-action@v0.0.8-prerelease
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        repository: magnificode-ltd/chatgpt-reviewer-github-action
+        ref: feature/rate-limit-fixes
+    - name: start action
+      run: node ./dist/index.js
+   env:
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
          
