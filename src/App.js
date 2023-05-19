@@ -1,10 +1,8 @@
-import React from "react";
-import "./App.css";
-import "./components/root-variables.css";
-import TodoAppInput from "./components/todo-app-input/todo-app-input";
-import TodoAppList from "./components/todo-app-list/todo-app-list";
-
-/*   Just simple todo-app ¯\_(ツ)_/¯  */
+import React from 'react';
+import './App.css';
+import './components/root-variables.css';
+import TodoAppInput from './components/todo-app-input/todo-app-input';
+import TodoAppList from './components/todo-app-list/todo-app-list';
 
 function App() {
   return (

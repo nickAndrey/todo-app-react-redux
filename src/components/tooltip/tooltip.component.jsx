@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./tooltip.component.css";
+import React, { useEffect, useRef, useState } from 'react';
+import './tooltip.component.css';
 
+// Todo rename the component
 function TooltipComponent({ title, position, children }) {
   const node = useRef();
   const [isVisible, setState] = useState(false);
@@ -11,8 +12,8 @@ function TooltipComponent({ title, position, children }) {
   };
 
   useEffect(() => {
-    document.addEventListener("mouseenter", onToggle);
-    return document.removeEventListener("mouseenter", onToggle);
+    document.addEventListener('mouseenter', onToggle);
+    return document.removeEventListener('mouseenter', onToggle);
   }, []);
 
   return (
@@ -23,9 +24,7 @@ function TooltipComponent({ title, position, children }) {
       onMouseLeave={() => setState(!isVisible)}
     >
       {children}
-      {isVisible && (
-        <span className={`tooltip-container__label ${position}`}>{title}</span>
-      )}
+      {isVisible && <span className={`tooltip-container__label ${position}`}>{title}</span>}
     </div>
   );
 }

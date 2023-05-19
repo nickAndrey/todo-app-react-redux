@@ -1,7 +1,7 @@
-import React from "react";
-import "./todo-app-list.css";
-import { useSelector } from "react-redux";
-import TodoAppListItem from "./todo-app-list-item/todo-app-list-item";
+import React from 'react';
+import './todo-app-list.css';
+import { useSelector } from 'react-redux';
+import TodoAppListItem from './todo-app-list-item/todo-app-list-item';
 
 function TodoAppList() {
   const todoList = useSelector((state) => state.todoList);
@@ -23,5 +23,4 @@ function TodoAppList() {
     </>
   );
 }
-
 export default TodoAppList;

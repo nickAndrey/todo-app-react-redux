@@ -1,8 +1,8 @@
-export const ADD_TODO = "ADD_TODO";
-export const DELETE_TODO = "DELETE_TODO";
-export const IS_EDIT_TODO = "IS_EDIT_TODO";
-export const EDIT_TODO = "EDIT_TODO";
-export const COMPLETE_TODO = "COMPLETE_TODO";
+export const ADD_TODO = 'ADD_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
+export const IS_EDIT_TODO = 'IS_EDIT_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const COMPLETE_TODO = 'COMPLETE_TODO';
 
 let initialId = 0;
 export function addTodo(content) {
